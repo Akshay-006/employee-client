@@ -36,7 +36,7 @@ function Home() {
   };
 
   const handleEdit = (employeeID) => {
-    navigate(`/edit/${employeeID}`); // Navigating to the edit page with employee ID
+    navigate(`/edit/${employeeID}`); 
   };
 
   return (

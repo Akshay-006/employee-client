@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './pages/EditEmployee.css'
 
 function EditEmployee() {
-  const { id } = useParams(); // Get the employee ID from the URL
+  const { id } = useParams();
   const [employeeData, setEmployeeData] = useState({
     name: '',
     employeeID: '',
@@ -16,7 +16,6 @@ function EditEmployee() {
   });
   const navigate = useNavigate();
 
-  // Fetch the employee data when the component loads
   useEffect(() => {
     axios.get(`http://localhost:8001/employees/${id}`)
       .then(response => {
@@ -44,7 +43,7 @@ function EditEmployee() {
     try {
       const response = await axios.put(`http://localhost:8001/employees/${id}`, employeeData);
       alert('Employee details updated successfully');
-      navigate('/'); // Navigate back to the home page
+      navigate('/'); 
     } catch (error) {
       console.error('Error updating employee:', error);
       alert('There was an error updating the employee details.');
