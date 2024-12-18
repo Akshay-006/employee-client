@@ -1,0 +1,134 @@
+.tableContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .employeeTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .employeeTable thead {
+    background-color: #f4f6f9;
+  }
+  
+  .employeeTable th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #e0e4e8;
+  }
+  
+  .employeeTable tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .employeeTable tbody tr {
+    cursor: pointer;
+  }
+  
+  .employeeTable tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .employeeTable td {
+    padding: 12px 15px;
+    color: #34495e;
+    border-bottom: 1px solid #e7eaee;
+  }
+  
+  .actionButton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .editButton {
+    background-color: #3498db;
+    color: white;
+    margin-right: 8px;
+  }
+  
+  .editButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .confirmDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .confirmDialog p {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .confirmDialog button {
+    margin: 0 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .confirmDialog .confirmYes {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .confirmDialog .confirmNo {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .employeeTable {
+      font-size: 0.9rem;
+    }
+  
+    .employeeTable th,
+    .employeeTable td {
+      padding: 8px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .employeeTable {
+      font-size: 0.8rem;
+    }
+  
+    .actionButton {
+      padding: 4px 8px;
+    }
+  }
